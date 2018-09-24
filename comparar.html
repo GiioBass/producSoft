@@ -11,11 +11,8 @@
     <title>Administrador de Productos</title>
 </head>
 <style>
-    html,body{
+    html{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        box-sizing: content-box;
-        margin:0;
-        padding:0;
     }
 </style>
 <body>
@@ -37,9 +34,9 @@
     <!-- Links -->
 
         <ul class="nav ">
-            <li class="nav-item">
-                <a class="nav-link " href="index.html">Inicio</a>
-            </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="index.html">Inicio</a>
+                    </li>
             <li class="nav-item">
                 <a class="nav-link " href="#">Administrador</a>
             </li>
@@ -57,69 +54,37 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="operaciones.html">Operaciones Matemáticas</a>
-
-               
-
-
-
-
-
-
-
             </li>
         </ul>
         
     </nav> 
 </div>
 
-<div class="  col-md-12 d-flex justify-content-center" style="height:400px; " >
-    <div class="col-10  align-self-center ">
-        <div class="d-flex justify-content-around">
-            
-            <div class="col-3 border border-dark rounded bg-dark" style="height:200px">
-                <a href="conversor.html" style="text-decoration: none">
-                        <div class="mt-4">
-                            
-                            <div class="d-flex justify-content-center ">
-                                <i class="material-icons text-white" style="font-size:50px"> euro_symbol</i>
-                                <i class="material-icons text-white" style="font-size:50px"> swap_horiz </i>
-                                <i class="material-icons text-white" style="font-size:60px"> attach_money</i>
-                            </div>
-                            <h2 class="text-center display-5 text-white" >Conversor de Moneda</h2>
-                        </div>
-                </a>
-            </div>
-            <div class="col-3 border border-dark rounded bg-dark" style="height:200px">
-                <a href="comparar.html" style="text-decoration: none">
-                        <div class="mt-4">
-                            
-                            <div class="d-flex justify-content-center ">
-                                <h2 class="display-4 text-white">A = B</h2>
-                            </div>
-                            <h2 class="text-center display-5 text-white" >Comparar Valores</h2>
-                        </div>
-                </a>
-            </div>
-            <div class="col-3 border border-dark rounded bg-dark" style="height:200px">
-                <a href="secuencia.html" style="text-decoration: none">
-                        <div class="mt-4">
-                            
-                            <div class="d-flex justify-content-center ">
-                                    <h2 class="display-4 text-white">1..2..3..</h2>
-                            </div>
-                            <h2 class="text-center display-5 text-white" >Secuencia de Numeros</h2>
-                        </div>
-                </a>
-            </div>
-
-
+<div class="container  col-12 mt-5 mb-4" >
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 ">
+            <div class="border border-dark col-12 p-4">
+                <form action="convertidor.php" >
+                    <div class=" text-center mb-5">
+                        <h2>Comparar de Valores.</h2>
+                    </div>
+                    <div class="d-flex justify-content-around mb-4">
+                        <p>Valor:</p>
+                        <input type="text" name="" id="">
+                        <p>Valor:</p>
+                        <input type="text" name="" id="">
+                    </div>
                     
+                    <div class="d-flex justify-content-center">
+                        <input type="submit" value="Comparar" >
+                    </div>
+                </form>
+            </div>
+
         </div>
+        <div class="col-2"></div>
     </div>
-        
-
-
-
 </div>
 
 <footer>
