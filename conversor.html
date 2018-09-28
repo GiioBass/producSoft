@@ -8,6 +8,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
+    
     <title>Administrador de Productos</title>
 </head>
 <style>
@@ -65,27 +66,27 @@
         <div class="col-2"></div>
         <div class="col-8 ">
             <div class="border border-dark col-12 p-4">
-                <form action="convertidor.php" >
+                <form  name="conversorMoneda" action="conversor.php" method="GET">
                     <div class=" text-center mb-5">
                         <h2>Conversor de Moneda.</h2>
                     </div>
                     <div class="d-flex justify-content-around mb-4">
                         <p>Valor:</p>
-                        <input type="text" name="" id="">
-                        <p>Valor:</p>
-                        <input type="text" name="" id="">
+                        <input type="text" name="valor1" id="">
+                        <!-- <p>Valor:</p>
+                        <input type="text" name="valor2" id=""> -->
                     </div>
                     <div class="d-flex justify-content-around mb-4">
 
                         <div>
-                            <input type="radio" name="" id=""> Pesos a Dolares <br> 
-                            <input type="radio" name="" id=""> Dolares a Pesos <br>
-                            <input type="radio" name="" id=""> Euros a Pesos <br>
+                            <input type="radio" name="opcion" id="" value="1"> Pesos a Dolares <br> 
+                            <input type="radio" name="opcion" id="" value="2"> Dolares a Pesos <br>
+                            <input type="radio" name="opcion" id="" value="3"> Euros a Pesos <br>
                         </div>
                         <div>
-                            <input type="radio" name="" id=""> Pesos a Euros <br>
-                            <input type="radio" name="" id=""> Euros a Dolares <br>
-                            <input type="radio" name="" id=""> Dolares a Euros <br>
+                            <input type="radio" name="opcion" id="" value="4"> Pesos a Euros <br>
+                            <input type="radio" name="opcion" id="" value="5"> Euros a Dolares <br>
+                            <input type="radio" name="opcion" id="" value="6"> Dolares a Euros <br>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
@@ -111,3 +112,5 @@
 
 </body>
 </html>
+
+<p></p> hola
