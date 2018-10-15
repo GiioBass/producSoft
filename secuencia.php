@@ -5,10 +5,10 @@
     function secuencia($num){
          
         for ($i=1; $i <= $num; $i++) { 
-             echo $i;
+             echo $i.'<br>';
         }
         
-        return $a;
+       
         
     }
 
