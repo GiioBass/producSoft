@@ -33,27 +33,29 @@
 
     <!-- Links -->
 
-        <ul class="nav ">
-                <li class="nav-item">
-                        <a class="nav-link " href="index.html">Inicio</a>
-                    </li>
+    <ul class="nav ">
+            <li class="nav-item">
+                <a class="nav-link " href="index.html">Inicio</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link " href="#">Administrador</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Registro de Productos</a>
+                <a class="nav-link" href="registro-producto.html">Registro de Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Consulta de Productos</a>
+                <a class="nav-link" href="consulta-productos.html">Consulta de Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Actualización de Productos</a>
+                <a class="nav-link" href="actualizar-producto.html">Actualización de Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Reportes Especiales</a>
+                <a class="nav-link" href="reportes-especiales.html">Reportes Especiales</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="operaciones.html">Operaciones Matemáticas</a>
+
+
             </li>
         </ul>
         
@@ -71,13 +73,19 @@
                     </div>
                     <div class="d-flex justify-content-around mb-4">
                         <p>Valor Pesos:</p>
-                        <input type="text" name="valPeso" id="">
+                        <div class="col-xs-3">
+
+                            <input class="form-control " type="text" name="valPeso" id="">
+                        </div>
                         <p>Valor Euros:</p>
-                        <input type="text" name="valEuro" id="">
+                        <div class="col-xs-3">
+
+                            <input class="form-control" type="text" name="valEuro" id="">
+                        </div>
                     </div>
                     
                     <div class="d-flex justify-content-center">
-                        <input type="submit" value="Comparar" >
+                        <input class="btn" type="submit" value="Comparar" >
                     </div>
                 </form>
             </div>

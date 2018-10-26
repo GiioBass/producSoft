@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,12 +13,53 @@
     
     <title>Administrador de Productos</title>
 </head>
+<?php
+
+    $codProducto = @$_POST["cod-producto"];
+    $nombreProducto = @$_POST["nombre-producto"];
+    $pesoProducto = @$_POST["peso-producto"];
+    $marcaProducto = @$_POST["marca-producto"];
+    $regionProducto = @$_POST["region-producto"];
+    
+    // variable con el convierte el codigo para el nombre del archivo
+    $nombreArchivo = $codProducto . ".txt"; 
+
+    // Verifica si el archivo ya existe
+    if (file_exists($nombreArchivo) ) {
+        echo "el archivo ya existe";
+    }
+    else {
+        
+        // crea el nuevo archivo
+        $nuevoArchivo = fopen($nombreArchivo, "w") or die ("el archivo no se creo");
+        
+        // datos ingresados en el form para guardar en el archivo
+        $contenido =  $codProducto .', ' . 
+        $nombreProducto  . ', ' .
+        $pesoProducto . ', ' .
+        $marcaProducto  . ', ' .
+        $regionProducto;
+        
+        // funcion para escribir los datos en el archivo creado anteriormente
+        fwrite( $nuevoArchivo , $contenido) or die ("no se guardaron los datos ingresados");
+        
+        // funcion para cerrar el archivo creado para escribir los datos   
+        fclose($nuevoArchivo) or die ("el archivo no se cerro");
+
+        echo "El archivo se guardo exitosamente";
+        
+    }
+
+    ?>
+
 <style>
     html{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 </style>
 <body>
+
+
     
    <div class="container bg-dark col-sm-12 p-2 " >
 
@@ -34,7 +77,7 @@
 
     <!-- Links -->
 
-    <ul class="nav ">
+         <ul class="nav ">
             <li class="nav-item">
                 <a class="nav-link " href="index.html">Inicio</a>
             </li>
@@ -68,42 +111,52 @@
         <div class="col-2"></div>
         <div class="col-8 ">
             <div class="border border-dark col-12 p-4">
-                <form  name="conversorMoneda" action="conversor.php" method="GET">
+                
                     <div class=" text-center mb-5">
-                        <h2>Conversor de Moneda.</h2>
+                        <h2>Reportes Especiales.</h2>
                     </div>
                     <div class="d-flex justify-content-around mb-4">
-                        <p>Valor:</p>
-                        <div class="col-xs-3">
-
-                            <input class="form-control" type="text" name="valor1" id="">
-                        </div>
-                        <!-- <p>Valor:</p>
-                        <input type="text" name="valor2" id=""> -->
+                        <p>Codigo Producto:</p>
+                        <?php echo "<p>$codProducto</p>" ?>
                     </div>
                     <div class="d-flex justify-content-around mb-4">
 
-                        <div>
-                            <input type="radio" name="opcion" id="" value="1"> Pesos a Dolares <br> 
-                            <input type="radio" name="opcion" id="" value="2"> Dolares a Pesos <br>
-                            <input type="radio" name="opcion" id="" value="3"> Euros a Pesos <br>
-                        </div>
-                        <div>
-                            <input type="radio" name="opcion" id="" value="4"> Pesos a Euros <br>
-                            <input type="radio" name="opcion" id="" value="5"> Euros a Dolares <br>
-                            <input type="radio" name="opcion" id="" value="6"> Dolares a Euros <br>
-                        </div>
+                        <p>Nombre Producto:</p>
+                        <?php echo "<p>$nombreProducto</p>" ?>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <input class="btn" type="submit" value="Convertir" >
+                    <div class="d-flex justify-content-around mb-4">
+
+                        <p>Peso:</p>
+                        <?php echo "<p>$pesoProducto</p>" ?>
                     </div>
-                </form>
+                    <div class="d-flex justify-content-around mb-4">
+
+                        <p>Marca Producto:</p>
+                        <?php echo "<p>$marcaProducto</p>" ?>
+                    </div>
+                    <div class="d-flex justify-content-around mb-4">
+
+                        <p>Región Proveniente:</p>
+                        <?php echo "<p>$regionProducto</p>" ?>
+                    </div>
+                        
+                    </div>
+                    <div class="d-flex justify-content-center" >
+                        <a href="reportes-especiales.html" style="text-decoration: none">
+                        <i class="material-icons " style="font-size:80px">arrow_back</i>
+                        </a>
+                    </div>
+                   
             </div>
+
+           
 
         </div>
         <div class="col-2"></div>
     </div>
 </div>
+
+
 
 <footer>
     <div class="container bg-dark col-md-12 pt-4" style="height:100px" >
@@ -117,4 +170,20 @@
 
 </body>
 </html>
+
+
+    
+    
+    
+       
+       
+      
+
+
+
+
+  
+    
+   
+    
 

@@ -29,7 +29,7 @@
         
     }
 
-    
+    ?>
 
     echo '<!DOCTYPE html>';
     echo '<html lang="en">';
@@ -65,29 +65,31 @@
 
     // <!-- Links -->
 
-        echo '<ul class="nav ">';
-                echo '<li class="nav-item">';
-                       echo '<a class="nav-link " href="index.html">Inicio</a>';
-                  echo '</li>';
-            echo '<li class="nav-item">';
-                echo '<a class="nav-link " href="#">Administrador</a>';
-            echo '</li>';
-            echo '<li class="nav-item">';
-                echo '<a class="nav-link" href="#">Registro de Productos</a>';
-            echo '</li>';
-            echo '<li class="nav-item">';
-                echo '<a class="nav-link" href="#">Consulta de Productos</a>';
-           echo  '</li>';
-            echo '<li class="nav-item">';
-                echo '<a class="nav-link" href="#">Actualización de Productos</a>';
-            echo '</li>';
-            echo '<li class="nav-item">';
-                echo '<a class="nav-link" href="#">Reportes Especiales</a>';
-           echo '</li>';
-            echo '<li class="nav-item">';
-                echo '<a class="nav-link" href="operaciones.html">Operaciones Matemáticas</a>';
-            echo '</li>';
-        echo '</ul>';
+    <ul class="nav ">
+    <li class="nav-item">
+        <a class="nav-link " href="index.html">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="#">Administrador</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="registro-producto.html">Registro de Productos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="consulta-productos.html">Consulta de Productos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="actualizar-producto.html">Actualización de Productos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="reportes-especiales.html">Reportes Especiales</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="operaciones.html">Operaciones Matemáticas</a>
+
+
+    </li>
+</ul>
         
     echo '</nav> ';
 echo '</div>';
@@ -121,4 +123,3 @@ echo '</footer>';
 echo '</body>';
 echo '</html>';
 
-?>
