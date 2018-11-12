@@ -16,6 +16,57 @@
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 </style>
+<?php
+
+
+    $nombre_base = 'bdunad40';
+
+    // Crear Conexion a la Base
+    $conexion = mysqli_connect("localhost","root","12345678");
+    if ( !$conexion) {
+
+        echo "la conexión fallo" . mysqli_connect_error();
+        
+    }
+
+    echo "La conexión con la Base de Datos fue exitosa";
+
+    echo "<br>";
+    // Crear la base de datos
+
+
+    $crear_db = "CREATE DATABASE $nombre_base";
+   
+    if (mysqli_query($conexion,$crear_db)) {
+        echo "la base de datos $nombre_base fue creada exitosamente";
+    }else {
+        echo "No fue posible crear la base de datos $nombre_base " . mysqli_connect_error();
+    }
+
+
+     // crear tabla 
+
+     $crear_tabla = "CREATE TABLE tabla40 (
+        codigo int autoincrement,
+        nombre varchar(50);
+        
+    ) ";
+
+if ( mysqli_query($conexion, $crear_tabla) ) {
+            echo "la tabla fue creada exitosamente";
+        }else {
+            echo "la tabla no pudo ser creada " . mysqli_connect_error();
+        }
+
+
+
+
+    mysqli_close($conexion);
+    echo "La conexion con la base de datos fue cerrada";
+
+
+?>
+
 <body>
     
    <div class="container bg-dark col-sm-12 p-2 " >
@@ -68,56 +119,13 @@
         <div class="col-2"></div>
         <div class="col-8 ">
             <div class="  border border-dark col-12 p-4">
-                <form  name="reporte-especial" action="reportes-especiales.php" method="POST">
-                    <div class=" text-center mb-5">
-                        <h2>Reportes Especiales.</h2>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-                        <p>Codigo Producto:</p>
-                        <div class="col-xs-2">
+                
 
-                            <input class="form-control" type="text" name="cod-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
+                    <!-- -------------------------------------------------------- -->
 
-                        <p>Nombre Producto:</p>
-                        <div class="col-xs-2">
 
-                            <input class="form-control" type="text" name="nombre-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
 
-                        <p>Peso:</p>
-                        <div class="col-xs-2">
 
-                            <input  class="form-control" type="number" name="peso-producto" id="" >
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Marca Producto:</p>
-                        <div class="col-xs-2">
-
-                            <input class="form-control"  type="text" name="marca-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Región Proveniente:</p>
-                        <div class="col-xs-2">
-
-                            <input  class="form-control" type="text" name="region-producto" id="">
-                        </div>
-                    </div>
-                        
-                    </div>
-                   
-                    <div class="d-flex justify-content-center">
-                        <input   class="btn mt-3" type="submit" value=" Exportar " >
-                    </div>
-                </form>
             </div>
 
         </div>

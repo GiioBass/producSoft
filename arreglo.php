@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,12 +13,71 @@
     
     <title>Administrador de Productos</title>
 </head>
+<?php
+
+$num1 = @$_POST["num1"];
+$num2 = @$_POST["num2"];
+$num3 = @$_POST["num3"];
+$num4 = @$_POST["num4"];
+$num5 = @$_POST["num5"];
+$opcion= @$_POST["opcion"];
+
+
+   
+
+   
+   function multiplicarNumeros ($a, $b, $c, $d, $e){
+       $numeros  = array( $a, $b, $c, $d, $e);
+       echo 'Los numeros multiplicados por el numero de grupo colaborativo son: ' ;
+       echo '<br>';
+       
+       for ($i=0; $i < count($numeros); $i++) { 
+           
+           echo ($numeros[$i] * 40) . "\n";
+           
+       }
+       echo '<br>';
+   }
+   
+   function ordenarNumeros($a, $b, $c, $d, $e){
+       $numerosOrden = array( $a, $b, $c, $d, $e);
+       echo 'La cantidad de elementos son:  ' . count($numerosOrden);
+       echo '<br>';
+       sort($numerosOrden);
+       
+       foreach ($numerosOrden as $clave => $valor) {
+           
+           echo   $valor . "\n";
+           
+           
+       }
+       
+       echo '<br>';
+       
+   }
+
+
+   function  eliminarNum($a, $b, $c, $d, $e ,$f){
+
+       $numerosEliminar  = array($a, $b, $c, $d, $e);
+       
+       unset($numerosEliminar[$f]);
+       echo 'Numeros ingresados sin el numero eliminado <br>';
+       for ($i=0; $i < count($numerosEliminar); $i++) { 
+           echo $numerosEliminar[$i] . ' ' ;
+        }
+    }
+
+    ?>
+
 <style>
     html{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 </style>
 <body>
+
+
     
    <div class="container bg-dark col-sm-12 p-2 " >
 
@@ -34,7 +95,7 @@
 
     <!-- Links -->
 
-    <ul class="nav ">
+         <ul class="nav ">
             <li class="nav-item">
                 <a class="nav-link " href="index.html">Inicio</a>
             </li>
@@ -63,67 +124,38 @@
     </nav> 
 </div>
 
-<div class="container  col-12 mt-5 mb-4" >
+<div class="container  col-12 mt-5 mb-4" ">
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8 ">
-            <div class="  border border-dark col-12 p-4">
-                <form  name="reporte-especial" action="reportes-especiales.php" method="POST">
-                    <div class=" text-center mb-5">
-                        <h2>Reportes Especiales.</h2>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-                        <p>Codigo Producto:</p>
-                        <div class="col-xs-2">
+            <div class="border border-dark col-12 p-4" style ="height:300px">
+                
+                   <?php 
 
-                            <input class="form-control" type="text" name="cod-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
+                   echo '<p class="display-5 font-weight-bold">';
+                   multiplicarNumeros( $num1, $num2, $num3, $num4, $num5 );
+                   echo '</p>';
+                   echo '<p class="display-5 font-weight-bold">';
+                   ordenarNumeros( $num1, $num2, $num3,  $num4, $num5 );
+                   echo '</p>';
+                   echo '<p class="display-5 font-weight-bold">';
+                   eliminarNum( $num1, $num2, $num3,  $num4, $num5, $opcion );
+                   echo '</p>';
 
-                        <p>Nombre Producto:</p>
-                        <div class="col-xs-2">
 
-                            <input class="form-control" type="text" name="nombre-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Peso:</p>
-                        <div class="col-xs-2">
-
-                            <input  class="form-control" type="number" name="peso-producto" id="" >
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Marca Producto:</p>
-                        <div class="col-xs-2">
-
-                            <input class="form-control"  type="text" name="marca-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Región Proveniente:</p>
-                        <div class="col-xs-2">
-
-                            <input  class="form-control" type="text" name="region-producto" id="">
-                        </div>
-                    </div>
-                        
-                    </div>
                    
-                    <div class="d-flex justify-content-center">
-                        <input   class="btn mt-3" type="submit" value=" Exportar " >
-                    </div>
-                </form>
-            </div>
+                   
 
+
+                   ?>
+                   
+            </div>
         </div>
         <div class="col-2"></div>
     </div>
 </div>
+
+
 
 <footer>
     <div class="container bg-dark col-md-12 pt-4" style="height:100px" >
@@ -137,4 +169,20 @@
 
 </body>
 </html>
+
+
+    
+    
+    
+       
+       
+      
+
+
+
+
+  
+    
+   
+    
 

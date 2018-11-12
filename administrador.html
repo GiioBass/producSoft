@@ -67,57 +67,24 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8 ">
-            <div class="  border border-dark col-12 p-4">
-                <form  name="reporte-especial" action="reportes-especiales.php" method="POST">
-                    <div class=" text-center mb-5">
-                        <h2>Reportes Especiales.</h2>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-                        <p>Codigo Producto:</p>
-                        <div class="col-xs-2">
-
-                            <input class="form-control" type="text" name="cod-producto" id="">
+            <div class="  border border-dark col-12 p-4 " style="height:300px">
+                
+                <div class="d-flex justify-content-around mt-5">
+                    
+                    <!-- -------------------------------------------------------- -->
+                    <form action="administrador.php" method="get">
+                        <!-- <div class="col-xs-5 mt-3">
+                            <input class="form-control" type="text" name="nombre_base" id="">
+                            
+                        </div> -->
+                        <div class="d-flex justify-content-around mt-3">
+                        <input class="btn" type="submit" value="Crear Base de Datos" name="create-file">
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
+                    </form>
+                    
+                </div>
 
-                        <p>Nombre Producto:</p>
-                        <div class="col-xs-2">
 
-                            <input class="form-control" type="text" name="nombre-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Peso:</p>
-                        <div class="col-xs-2">
-
-                            <input  class="form-control" type="number" name="peso-producto" id="" >
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Marca Producto:</p>
-                        <div class="col-xs-2">
-
-                            <input class="form-control"  type="text" name="marca-producto" id="">
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-
-                        <p>Región Proveniente:</p>
-                        <div class="col-xs-2">
-
-                            <input  class="form-control" type="text" name="region-producto" id="">
-                        </div>
-                    </div>
-                        
-                    </div>
-                   
-                    <div class="d-flex justify-content-center">
-                        <input   class="btn mt-3" type="submit" value=" Exportar " >
-                    </div>
-                </form>
             </div>
 
         </div>
