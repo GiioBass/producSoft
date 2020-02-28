@@ -1,7 +1,7 @@
 <?php
 
-    $valor1 = @$_GET['valPeso'];
-    $valor2 = @$_GET['valEuro'];
+    $valor1 = @$_POST['valPeso'];
+    $valor2 = @$_POST['valEuro'];
     $euro = 3532;
     
     function convertirEuro ($val2){

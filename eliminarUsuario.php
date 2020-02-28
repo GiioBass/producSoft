@@ -8,6 +8,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
+
     <title>Administrador de Productos</title>
 </head>
 <style>
@@ -15,8 +16,37 @@
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 </style>
+<?php
+
+$indice = @$_POST["indice"];
+
+// Crear Conexion a la Base
+$conexion = mysqli_connect("localhost", "root", "12345678", "bdunad40");
+if (!$conexion) {
+
+    echo "la conexión fallo" . mysqli_connect_error();
+
+}
+
+// INGRESAR DATOS TABLA
+
+$eliminarDatos = "DELETE FROM usuarios WHERE nombre_usuario = '$indice'";
+
+if (mysqli_query($conexion, $eliminarDatos)) {
+    echo "El usuario se elimino correctamente";
+    echo "<br>";
+} else {
+    echo "El usuario no se elimino " . mysqli_connect_error($conexion);
+    echo "<br>";
+}
+
+mysqli_close($conexion);
+// echo "La conexion con la base de datos fue cerrada";
+
+?>
+
 <body>
-    
+
    <div class="container bg-dark col-sm-12 p-2 " >
 
         <div class="d-flex justify-content-center">
@@ -27,7 +57,7 @@
         </div>
 
    </div>
-   
+
    <div class="menu">
    <nav class="navbar navbar-expand-sm bg-dark">
 
@@ -58,36 +88,22 @@
 
             </li>
         </ul>
-        
-    </nav> 
+
+    </nav>
 </div>
 
-<div class="container  col-12 mt-5 mb-4 " >
+<div class="container  col-12 mt-5 mb-4" >
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8 ">
-            <div class="border border-dark col-12 p-4">
-                <form action="comparar.php" method="POST"  >
-                    <div class=" text-center mb-5">
-                        <h2>Comparar de Valores.</h2>
-                    </div>
-                    <div class="d-flex justify-content-around mb-4">
-                        <p>Valor Pesos:</p>
-                        <div class="col-xs-3">
+            <div class="  border border-dark col-12 p-4">
 
-                            <input class="form-control " type="text" name="valPeso" id="">
-                        </div>
-                        <p>Valor Euros:</p>
-                        <div class="col-xs-3">
 
-                            <input class="form-control" type="text" name="valEuro" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-center">
-                        <input class="btn" type="submit" value="Comparar" >
-                    </div>
-                </form>
+                    <!-- -------------------------------------------------------- -->
+
+
+
+
             </div>
 
         </div>
@@ -101,9 +117,10 @@
             <p>William G. Navarro</p>
             <p>Codigo: 1.094.915.177</p>
         </div>
-        
+
     </div>
 </footer>
 
 </body>
 </html>
+

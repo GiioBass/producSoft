@@ -17,54 +17,20 @@
     }
 </style>
 <?php
-
-
-    $nombre_base = 'bdunad40';
-
-    // Crear Conexion a la Base
-    $conexion = mysqli_connect("localhost","root","12345678");
-    if ( !$conexion) {
-
-        echo "la conexión fallo" . mysqli_connect_error();
-        
-    }
-
-    echo "La conexión con la Base de Datos fue exitosa";
-
-    echo "<br>";
-    // Crear la base de datos
-
-
-    $crear_db = "CREATE DATABASE $nombre_base";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+    
+    // INGRESAR DATOS TABLA 
+    $host= "localhost";
+    $user = "root";
+    $pass="12345678";
+    $database="bdunad40";
+    $date = date('d-m-Y-H-i-s');
    
-    if (mysqli_query($conexion,$crear_db)) {
-        echo "la base de datos $nombre_base fue creada exitosamente";
-    }else {
-        echo "No fue posible crear la base de datos $nombre_base " . mysqli_connect_error();
-    }
-
-
-     // crear tabla 
-
-     $crear_tabla = "CREATE TABLE tabla40 (
-        codigo int autoincrement,
-        nombre varchar(50);
-        
-    ) ";
-
-if ( mysqli_query($conexion, $crear_tabla) ) {
-            echo "la tabla fue creada exitosamente";
-        }else {
-            echo "la tabla no pudo ser creada " . mysqli_connect_error();
-        }
-
-
-
-
-    mysqli_close($conexion);
-    echo "La conexion con la base de datos fue cerrada";
-
-
+    $sqlDump = '"C:\AppServ\MySQL\bin\mysqldump.exe"';
+    $backup_file = '"C:\AppServ\www\fase_2\archivos\"'.$database. "-" .$date. ".sql";
+    system("$sqlDump  -h $host -u $user -p $pass $database > $backup_file");
 ?>
 
 <body>
@@ -145,4 +111,3 @@ if ( mysqli_query($conexion, $crear_tabla) ) {
 
 </body>
 </html>
-

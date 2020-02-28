@@ -1,8 +1,8 @@
 <?php
 
     // VARIABLES
-    $valor1 = @$_GET['valor1'];
-    $opc1 = @$_GET['opcion'];
+    $valor1 = @$_POST['valor1'];
+    $opc1 = @$_POST['opcion'];
     
     $euroP = 3532.09;
     $dolarP = 3002.25;

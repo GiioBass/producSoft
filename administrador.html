@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Administrador de Productos</title>
 </head>
 <style>
@@ -16,9 +18,10 @@
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 </style>
+
 <body>
-    
-   <div class="container bg-dark col-sm-12 p-2 " >
+
+    <div class="container bg-dark col-sm-12 p-2 ">
 
         <div class="d-flex justify-content-center">
             <div class="d-flex align-items-center">
@@ -27,81 +30,178 @@
             <h1 class="display-1 font-weight-bold text-center text-white">ProducSoft</h1>
         </div>
 
-   </div>
-   
-   <div class="menu">
-   <nav class="navbar navbar-expand-sm bg-dark">
+    </div>
 
-    <!-- Links -->
+    <div class="menu">
+        <nav class="navbar navbar-expand-sm bg-dark">
 
-    <ul class="nav ">
-            <li class="nav-item">
-                <a class="nav-link " href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="administrador.html">Administrador</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="registro-producto.html">Registro de Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="consulta-productos.html">Consulta de Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="actualizar-producto.html">Actualización de Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="reportes-especiales.html">Reportes Especiales</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="operaciones.html">Operaciones Matemáticas</a>
+            <!-- Links -->
+
+            <ul class="nav ">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="administrador.html">Administrador</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registro-producto.html">Registro de Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulta-productos.html">Consulta de Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="actualizar-producto.html">Actualización de Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reportes-especiales.html">Reportes Especiales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="operaciones.html">Operaciones Matemáticas</a>
 
 
-            </li>
-        </ul>
-        
-    </nav> 
-</div>
+                </li>
+            </ul>
 
-<div class="container  col-12 mt-5 mb-4" >
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8 ">
-            <div class="  border border-dark col-12 p-4 " style="height:300px">
-                
-                <div class="d-flex justify-content-around mt-5">
-                    
-                    <!-- -------------------------------------------------------- -->
-                    <form action="administrador.php" method="get">
-                        <!-- <div class="col-xs-5 mt-3">
+        </nav>
+    </div>
+
+    <div class="container  col-12 mt-5 mb-4">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 ">
+                <div class="  border border-dark col-12 p-4 " style="height:900px">
+
+                    <div class="d-flex justify-content-around mt-5">
+
+                        <!-- -------------------------------------------------------- -->
+                        <form action="crearBD.php" method="POST">
+                            <!-- <div class="col-xs-5 mt-3">
                             <input class="form-control" type="text" name="nombre_base" id="">
                             
                         </div> -->
-                        <div class="d-flex justify-content-around mt-3">
-                        <input class="btn" type="submit" value="Crear Base de Datos" name="create-file">
-                        </div>
-                    </form>
-                    
+                            <div class="d-flex justify-content-around mt-3">
+                                <input class="btn" type="submit" value="Crear Base de Datos bdunad40" name="create-file">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="d-flex justify-content-around mt-5">
+                        <form action="crearTabla.php" method="POST">
+                            <!-- <div class="col-xs-5 mt-3">
+                            <input class="form-control" type="text" name="nombre_base" id="">
+                            
+                        </div> -->
+                            <div class="d-flex justify-content-around mt-3">
+                                <input class="btn" type="submit" value="Crear Tabla Base de Datos" name="create-file">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-around mt-5">
+                        <form action="eliminarProducto.php" method="POST">
+                            <!-- <div class="col-xs-5 mt-3">
+                            <input class="form-control" type="text" name="nombre_base" id="">
+                            
+                        </div> -->
+                            <div class="d-flex justify-content-around mt-3">
+                                <input class="form-control" type="number" name="indice" id="">
+                                <input class="btn" type="submit" value="Eliminar Producto" name="delete-file">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="d-flex justify-content-around mt-5">
+                        <form action="respaldoBD.php" method="POST">
+                            <!-- <div class="col-xs-5 mt-3">
+                            <input class="form-control" type="text" name="nombre_base" id="">
+                            
+                        </div> -->
+                            <div class="d-flex justify-content-around mt-3">
+                                <!-- <input class="form-control" type="number" name="indice" id=""> -->
+                                <input class="btn" type="submit" value="Crear Respaldo BD" name="">
+                            </div>
+                        </form>
+                        <form action="reporte.php">
+                            <!-- <div class="col-xs-5 mt-3">
+                            <input class="form-control" type="text" name="nombre_base" id="">
+                            
+                        </div> -->
+                            <div class="d-flex justify-content-around mt-3">
+                                <!-- <input class="form-control" type="number" name="indice" id=""> -->
+                                <input class="btn" type="submit" value="Generar Reporte" name="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-around mt-5">
+
+                        <form action="ingresoUsuario.php" method="POST">
+                            <div class="d-flex justify-content-around mb-4">
+
+                                <p>Nombre Usuario:</p>
+                                <div class="col-xs-2">
+
+                                    <input class="form-control" type="text" name="nombre-usuario" id="">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around mb-4">
+
+                                <p>Contraseña Usuario:</p>
+                                <div class="col-xs-2">
+
+                                    <input class="form-control" type="text" name="contraseña-usuario" id="">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around mb-4">
+
+                                <p>Estado:</p>
+                                <div class="col-xs-2">
+
+                                    <input class="form-control" type="number" name="estado-usuario" id="">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around mb-4">
+                                <input class="btn" type="submit" value="Ingreso Usuario" name="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-around mt-5">
+
+                        <form action="eliminarUsuario.php" method="POST">
+                            <!-- <div class="col-xs-5 mt-3">
+                                <input class="form-control" type="text" name="nombre_base" id="">
+                                
+                            </div> -->
+                            <div class="d-flex justify-content-around mt-3">
+                                Usuario:
+                                <br>
+                                <input class="form-control" type="text" name="indice" id="">
+                                <input class="btn" type="submit" value="Eliminar Usuario" name="delete-user">
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
+            </div>
 
 
+        </div>
+
+    </div>
+    <div class="col-2"></div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="container bg-dark col-md-12 pt-4" style="height:100px">
+            <div class="text-white " style="line-height:0.5">
+                <p>William G. Navarro</p>
+                <p>Codigo: 1.094.915.177</p>
             </div>
 
         </div>
-        <div class="col-2"></div>
-    </div>
-</div>
-
-<footer>
-    <div class="container bg-dark col-md-12 pt-4" style="height:100px" >
-        <div class="text-white " style="line-height:0.5" >
-            <p>William G. Navarro</p>
-            <p>Codigo: 1.094.915.177</p>
-        </div>
-        
-    </div>
-</footer>
+    </footer>
 
 </body>
-</html>
 
+</html>
